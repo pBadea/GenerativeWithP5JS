@@ -4,6 +4,7 @@ let y = 0;
 let spacing = 60;
 let epochs = 0;
 let deviaton = 0;
+
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   // createCanvas(window.innerHeight / 2,window.innerHeight / 2);
@@ -24,11 +25,13 @@ function draw() {
   // colors.push(randomColor);
   // randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
   // colors.push(randomColor);
+  // if(probability<)
 
   stroke(colors[Math.floor(random(1) * 10) % colors.length]);
   // print(colors[Math.floor(random(1) * 10) % 5])
-  var probability = 0.8;
-  if (random(1) < probability) {
+  let probability = 0.8;
+  let rand = random(1)
+  if (rand < probability) {
     line(xLeft, y, xLeft + spacing, y + spacing);
   } else {
     line(xLeft, y + spacing, xLeft + spacing, y);
@@ -39,7 +42,7 @@ function draw() {
     y += spacing;
   }
 
-  if (random(1) < probability - 0.63) {
+  if (rand < probability) {
     line(xRight, y, xRight - spacing, y + spacing);
   } else {
     line(xRight, y + spacing, xRight - spacing, y);
@@ -53,10 +56,10 @@ function draw() {
     let xRight = window.innerWidth;
     let xLeft = 0;
     y = 0;
-    background(0);
-    
-    epochs ++;
-    if(epochs == 3){
+    background(0,0,0,200);
+
+    epochs++;
+    if (epochs == 3) {
       epochs = 0;
 
       // deviaton++;
