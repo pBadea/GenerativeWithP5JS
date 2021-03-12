@@ -41,7 +41,7 @@ function draw() {
     strokeWeight(8);
   stroke(colors[Math.floor(random(1) * 10) % colors.length]);
   // print(colors[Math.floor(random(1) * 10) % 5])
-  let probability = 0.8;
+  let probability = 0.6;
   let rand = random(1)
   // let spacing = random(10, 100)
   if (rand < probability) {
