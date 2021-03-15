@@ -6,6 +6,7 @@ let spacing = 60;
 let epochs = 0;
 let deviaton = 0;
 let colors = [];
+let timer = 255;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
@@ -32,55 +33,54 @@ function draw() {
   // randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
   // colors.push(randomColor);
 
-
-  // if(probability<)
-  // pushRandomColor()
-  if (random(1) > 0.1)
-    strokeWeight(9);
-  else
-    strokeWeight(8);
-  stroke(colors[Math.floor(random(1) * 10) % colors.length]);
-  // print(colors[Math.floor(random(1) * 10) % 5])
-  let probability = 0.6;
-  let rand = random(1)
-  // let spacing = random(10, 100)
-  if (rand < probability) {
-    line(xLeft, y, xLeft + spacing, y + spacing);
-  } else {
-    line(xLeft, y + spacing, xLeft + spacing, y);
-  }
-  xLeft = xLeft + spacing;
-  if (xLeft > width / 2 - spacing) {
-    xLeft = 0;
-    y += spacing;
-  }
-
-  if (rand < probability) {
-    line(xRight, y, xRight - spacing, y + spacing);
-  } else {
-    line(xRight, y + spacing, xRight - spacing, y);
-  }
-  xRight = xRight - spacing;
-  if (xRight < width / 2 + spacing) {
-    xRight = width;
-    // y += spacing;
-  }
-  if (y > height) {
-    let xRight = window.innerWidth;
-    let xLeft = 0;
-    y = 0;
-
-    // background(0,0,0,100);
-    epochs++;
-    background(0, 0, 0, 200);
-    if (epochs == 2) {
-      epochs = 0;
-      background(0, 0, 0, 100);
-
-      // deviaton++;
-      // xRight = xRight*deviaton/13;
+  
+  // if (timer >= 0) {
+  //   timer--;
+    if (random(1) > 0.1)
+      strokeWeight(9);
+    else
+      strokeWeight(8);
+    stroke(colors[Math.floor(random(1) * 10) % colors.length]);
+    // print(colors[Math.floor(random(1) * 10) % 5])
+    let probability = 0.6;
+    let rand = random(1)
+    // let spacing = random(10, 100)
+    if (rand < probability) {
+      line(xLeft, y, xLeft + spacing, y + spacing);
+    } else {
+      line(xLeft, y + spacing, xLeft + spacing, y);
+    }
+    xLeft = xLeft + spacing;
+    if (xLeft > width / 2 - spacing) {
+      xLeft = 0;
+      y += spacing;
     }
 
-  }
+    if (rand < probability) {
+      line(xRight, y, xRight - spacing, y + spacing);
+    } else {
+      line(xRight, y + spacing, xRight - spacing, y);
+    }
+    xRight = xRight - spacing;
+    if (xRight < width / 2 + spacing) {
+      xRight = width;
+      // y += spacing;
+    }
+    if (y > height) {
+      let xRight = window.innerWidth;
+      let xLeft = 0;
+      y = 0;
+      // background(0,0,0,100);
+      epochs++;
+      background(0, 0, 0, 200);
+      if (epochs == 2) {
+        epochs = 0;
+        background(0, 0, 0, timer);
+
+        // deviaton++;
+        // xRight = xRight*deviaton/13;
+      }
+    }
+  // }
 
 }

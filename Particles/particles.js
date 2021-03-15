@@ -25,7 +25,7 @@ function setup() {
 }
 
 function draw() {
-
+  
   clear();
   background(0);
   for (let i = 0; i < 2; i++) {
@@ -40,13 +40,21 @@ function draw() {
     if (particles[i].finished()) {
       // remove this particle
       particles.splice(i, 1);
-    } else if (euclidianDistance(mouseX, mouseY, particles[i].x, particles[i].y) < 300) {
+    } else if (euclidianDistance(mouseX, mouseY, particles[i].x, particles[i].y) < 100) {
       // particles.splice(i, 1);
-        particles[i].alpha -= 50;
-      // print("cloooose");
-      // xParticle xMouse xN
+      // particles[i].vx *= 1.5;
+      // particles[i].vy *= random(1);
+      // particles[i].alpha = 255;
+      
+      // particles[i].alpha -= 50;
       // let xN = 2 * particles[i].x - mouseX;
       // let yN = 2 * particles[i].y - mousey;
+      // print(xN, yN)
+
+      // particles[i].x = xN;
+      // particles[i].y = yN;
+      // print("cloooose");
+      // xParticle xMouse xN
       //   particles[i].vy = yN;
       //   particles[i].vx = xN;
 
@@ -82,6 +90,7 @@ class Particle {
     // if(random(1) < 0.5)
     this.vx = random(-4, 5);
     this.alpha = 255;
+    
   }
 
   finished() {
