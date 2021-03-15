@@ -10,3 +10,6 @@ https://pbadea.github.io/GenerativeWithP5JS/10Print/index.html
 
 ## Simple Particles
 https://pbadea.github.io/GenerativeWithP5JS/Particles/index.html
+
+### Behind The Scenes
+![behindTheScenesParticle](https://user-images.githubusercontent.com/56653993/110992915-482e2100-837f-11eb-826c-483817ec8168.gif)
