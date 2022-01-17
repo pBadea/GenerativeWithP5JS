@@ -43,3 +43,9 @@ https://pbadea.github.io/GenerativeWithP5JS/Circles/lines.html
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/56653993/149767862-f7f1df87-fba1-4502-9024-a3b12b26748e.gif)
 
 
+![ezgif com-gif-maker(5)](https://user-images.githubusercontent.com/56653993/149777122-da1a13e0-bc61-40f9-bad8-aad44c41f704.gif)
+![ezgif com-gif-maker(1)](https://user-images.githubusercontent.com/56653993/149777220-4dbdaf90-9020-40a4-9081-ddc47f0908a8.gif)
+![ezgif com-gif-maker(6)](https://user-images.githubusercontent.com/56653993/149777244-2b78aa8d-5b28-4f35-8c4d-cfeec8272393.gif)
+
+
+
